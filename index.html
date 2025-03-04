@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Cracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="content">
+            <h1>Password Cracker</h1>
+            
+            <label for="username">Enter Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter Username">
+            
+            <label for="attack">Select Attack Type:</label>
+            <div class="attack-options">
+                <input type="radio" id="dictionary" name="attack" value="Dictionary Attack">
+                <label for="dictionary">Dictionary Attack</label><br>
+                
+                <input type="radio" id="brute-force" name="attack" value="Brute Force Attack">
+                <label for="brute-force">Brute Force Attack</label>
+            </div>
+            
+            <button onclick="runAttack()">Run Attack</button>
+            <button onclick="stopBruteForce()">Stop Brute Force</button>
+            
+            <div id="result" class="result">
+                <p id="attack-result">Waiting for attack...</p>
+            </div>
+        </div>
+    </div>
+
+   
+    <script src="app.js"></script>
+
+</body>
+</html>
